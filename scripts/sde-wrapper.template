@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+SDE_BIN="$HOME/intel-sde/sde64"
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [ ! -x "$SDE_BIN" ]; then echo "Intel SDE não encontrado: $SDE_BIN" >&2; exit 127; fi
+export GOMAXPROCS=1
+export GODEBUG=http2client=0,tls13=0
+exec "$SDE_BIN" -skx -- "$DIR/language_server.real" "$@" >> "$HOME/antigravity-sde-wrapper.log" 2>&1
