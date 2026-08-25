@@ -9,7 +9,7 @@ chmod +x "$I/run.sh" "$I/src/main.py"
 cat > "$A/antigravity-sde-manager.desktop" <<EOF
 [Desktop Entry]
 Name=Antigravity SDE Manager without AES — Linux
-Comment=Gerenciador gráfico do Antigravity + Intel SDE
+Comment=Antigravity + Intel SDE
 Exec=$I/run.sh
 Terminal=false
 Type=Application
