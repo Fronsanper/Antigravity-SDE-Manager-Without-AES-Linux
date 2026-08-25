@@ -8,7 +8,7 @@ cp -a "$D/src" "$I/"; cp -a "$D/scripts" "$I/"; cp "$D/VERSION" "$D/run.sh" "$I/
 chmod +x "$I/run.sh" "$I/src/main.py"
 cat > "$A/antigravity-sde-manager.desktop" <<EOF
 [Desktop Entry]
-Name=Antigravity SDE Manager without AES — Linux
+Name=Antigravity SDE Manager
 Comment=Antigravity + Intel SDE
 Exec=$I/run.sh
 Terminal=false
@@ -16,4 +16,4 @@ Type=Application
 Categories=Development;Utility;
 StartupNotify=true
 EOF
-echo "Instalado. Procure por Antigravity SDE Manager without AES — Linux no menu."
+echo "Installed. Look for Antigravity SDE Manager without AES — Linux in the menu."
